@@ -31,7 +31,7 @@ uv pip install -r requirements.txt
 4. Set up environment variables for the model provider you want to use:
 ```bash
 export OPENAI_API_KEY="your-openai-api-key"
-export OPENAI_API_KEY="your-anthropic-api-key"
+export ANTHROPIC_API_KEY="your-anthropic-api-key"
 ```
 
 ## Organization
