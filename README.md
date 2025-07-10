@@ -1,42 +1,37 @@
-# Context Engineering
+# 🧱 Context Engineering with LangGraph 
 
-Agents need context (e.g., instructions, external knowledge, tool feedback) to perform tasks. Context engineering is the art and science of filling the context window with just the right information at each step of an agent’s trajectory. In this repository, have a set of notebooks in the `context_engineering` folder that cover different strategies for context engineering, including **write, select, compress, and isolate**. For each, we explain how LangGraph is designed to support them with examples. 
+Agents need context (e.g., instructions, external knowledge, tool feedback) to perform tasks. Context engineering is the art and science of filling the context window with just the right information at each step of an agent’s trajectory. This repository has a set of notebooks in the `context_engineering` folder that cover different strategies for context engineering, including **write, select, compress, and isolate**. For each, we explain how LangGraph is designed to support it with examples. 
 
 ![Screenshot 2025-07-09 at 2 50 24 PM](https://github.com/user-attachments/assets/47a7741d-da6d-4204-8f0f-678a49560e9b)
 
-## Quickstart
+## 🚀 Quickstart 
 
 ### Prerequisites
 - Python 3.8 or higher
 - [uv](https://docs.astral.sh/uv/) package manager
+- [Deno](https://docs.deno.com/runtime/getting_started/installation/) required for the sandboxed environment in the `4_isolate_context.ipynb` notebook
 
 ### Installation
-1. Clone the repository:
+1. Clone the repository and activate a virtual environment:
 ```bash
 git clone https://github.com/langchain-ai/context_engineering
 cd context_engineering
-```
-
-2. Create and activate a virtual environment using uv:
-```bash
 uv venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
-3. Install dependencies:
+2. Install dependencies:
 ```bash
 uv pip install -r requirements.txt
 ```
 
-4. Set up environment variables for the model provider you want to use:
+3. Set up environment variables for the model provider(s) you want to use:
 ```bash
 export OPENAI_API_KEY="your-openai-api-key"
 export ANTHROPIC_API_KEY="your-anthropic-api-key"
 ```
 
-## Organization
-
-This repository is organized by the four context engineering categories:
+4. You can then run the notebooks in the `context_engineering` folder:
 
 ```
 context_engineering/
@@ -46,9 +41,7 @@ context_engineering/
 └── 4_isolate_context.ipynb    # Examples of context isolation methods
 ```
 
-Each category contains implementations and examples demonstrating the respective context engineering techniques, available in both markdown and Jupyter notebook formats.
-
-## Background
+## 📚 Background 
 
 As Andrej Karpathy puts it, LLMs are like a [new kind of operating system](https://www.youtube.com/watch?si=-aKY-x57ILAmWTdw&t=620&v=LCEmiRjPEtQ&feature=youtu.be). The LLM is like the CPU and its [context window](https://docs.anthropic.com/en/docs/build-with-claude/context-windows) is like the RAM, serving as the model’s working memory. Just like RAM, the LLM context window has limited [capacity](https://lilianweng.github.io/posts/2023-06-23-agent/) to handle various sources of context. And just as an operating system curates what fits into a CPU’s RAM, we can think about “context engineering” playing a similar role. [Karpathy summarizes this well](https://x.com/karpathy/status/1937902205765607626):
 
@@ -73,16 +66,16 @@ With this in mind, [Cognition](https://cognition.ai/blog/dont-build-multi-agents
 > *Agents often engage in conversations spanning hundreds of turns, requiring careful context management strategies.*
 >
 
-In this repo, we break down some common strategies — write, select, compress, and isolate — for agent context engineering by reviewing various popular agents and papers. We then explain how LangGraph is designed to support them!
+## Context Engineering Strategies
 
-* Writing context - saving it outside the context window to help an agent perform a task.
-* Selecting context - pulling it into the context window to help an agent perform a task.
-* Compressing context - retaining only the tokens required to perform a task.
-* Isolating context - splitting it up to help an agent perform a task.
+In this repo, we cover some common strategies — write, select, compress, and isolate — for agent context engineering by reviewing various popular agents and papers. We then explain how LangGraph is designed to support them!
 
-## Categories
+* **Writing context** - saving it outside the context window to help an agent perform a task.
+* **Selecting context** - pulling it into the context window to help an agent perform a task.
+* **Compressing context** - retaining only the tokens required to perform a task.
+* **Isolating context** - splitting it up to help an agent perform a task.
 
-## 1. Write Context
+### 1. Write Context
 **Description**: Saving information outside the context window to help an agent perform a task.
 
 ### 📚 **What's Covered in [1_write_context.ipynb](context_engineering/1_write_context.ipynb)**
