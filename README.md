@@ -7,7 +7,7 @@ Agents need context (e.g., instructions, external knowledge, tool feedback) to p
 ## 🚀 Quickstart 
 
 ### Prerequisites
-- Python 3.8 or higher
+- Python 3.9 or higher
 - [uv](https://docs.astral.sh/uv/) package manager
 - [Deno](https://docs.deno.com/runtime/getting_started/installation/) required for the sandboxed environment in the `4_isolate_context.ipynb` notebook
 
