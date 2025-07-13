@@ -2,7 +2,7 @@
 
 Agents need context (e.g., instructions, external knowledge, tool feedback) to perform tasks. Context engineering is the art and science of filling the context window with just the right information at each step of an agent’s trajectory. This repository has a set of notebooks in the `context_engineering` folder that cover different strategies for context engineering, including **write, select, compress, and isolate**. For each, we explain how LangGraph is designed to support it with examples. 
 
-![Screenshot 2025-07-09 at 2 50 24 PM](https://github.com/user-attachments/assets/47a7741d-da6d-4204-8f0f-678a49560e9b)
+<img width="1231" height="448" alt="Screenshot 2025-07-13 at 2 57 28 PM" src="https://github.com/user-attachments/assets/8e7b59e0-4bb0-48f6-aeba-2d789ada55e3" />
 
 ## 🚀 Quickstart 
 
